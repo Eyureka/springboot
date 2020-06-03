@@ -22,13 +22,15 @@ public class EmployeeRestController {
 		employeeDao = theEmployeeDao;
 	}
 	
+	@GetMapping("/")
+	public String landingPage(){
+		return "Hello Shreyash";
+	}
+	
 	@GetMapping("/employees")
 	public List<Employee> findAll(){
 		return employeeDao.findAll();
 	}
 	
-//	@GetMapping("/employees")
-//	public String findAll(){
-//		return "asasdfsaf";
-//	}
+	
 }
