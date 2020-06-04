@@ -20,12 +20,7 @@ public class EmployeeRestController {
 	@Autowired
 	public EmployeeRestController(EmployeeDao theEmployeeDao) {
 		employeeDao = theEmployeeDao;
-	}
-	
-	@GetMapping("/")
-	public String landingPage(){
-		return "Hello Shreyash";
-	}
+	}	
 	
 	@GetMapping("/employees")
 	public List<Employee> findAll(){
